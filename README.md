@@ -15,6 +15,9 @@ Trong đó gồm file:
 - Chứa các ảnh cần thiết của trang web
 ## Web tham khảo
 - https://vn.indeed.com/
+## Note Note Note
+- Mn cố gắng code layout bằng boostrap hết nha, khi nào bí quá hãy dùng css
+- Đối với các file code mn chia càng nhỏ ra càng tốt vd như header.css là file để style riêng cho header hay navbar.js là file chứa script riêng cho nav bar. Và code xong phần nào thì mn comment lại cho dễ đọc nha mục đích là để sao này có bug thì dễ fix thôi :D
 ## Bang mau
 - ![#000000](https://placehold.co/15x15/000000/000000.png) `#000000`
 - ![#FFFFFF](https://placehold.co/15x15/FFFFFF/FFFFFF.png) `#FFFFFF`
