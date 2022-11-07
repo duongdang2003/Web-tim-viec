@@ -2,7 +2,7 @@
 ## Mẫu layout
 Mẫu được để trong mục Template mn bấm vào để xem nha
 Trong đó gồm file:
-- *findword.xd* file này là file của adobe xd nếu được thì mn tải bản crack của xd về dùng nha (khuyến khích dùng cách này để xem layout chính xác nhất. File cài đặt ở google dỉve https://drive.google.com/file/d/1dBwoWgPMxt-eFZV3SJ4_hvZX0tiVw3My/view?usp=sharing)
+- *findword.xd* file này là file của adobe xd nếu được thì mn tải bản crack của xd về dùng nha (khuyến khích dùng cách này để xem layout chính xác nhất. File cài đặt ở google dỉve https://drive.google.com/drive/folders/1XA0mxj_sWRP3J9WIa498vY8jb8DzsfHg?usp=sharing
 - *Findwork.pdf* nếu ko tải xd thì mn có thể dùng file này để xem tổng quát nhưng ko tương tác với template đc
 - *Folder ảnh* như cái tên luôn folder chứa ảnh của từng trang web cũng như cách trên ko tương tác đc nhưng có thể xem riêng lẻ từng trang web
 - *Grid layout* folder chứa ảnh của layout khi được bật grid lên (khi design mn cố gắng theo sát cách bố trí layout trong đó nhe. VD trong ảnh dangky.png cái khung đăng ký sẽ chiếm 6 col trong grid nên mục đích của cái cái folder này là để mn biết được element đó sẽ chiếm bao nhiêu col, hai element cách nhau bao nhiêu,... còn nếu code khó quá thì mn có thể ước lượng đại cũng được miễn là nó ko phá vỡ layout và đẹp là đc :D. Đối với những element có width lẻ như chiếm 4.5 col thì sẽ đc đề cập ở phần Custom)
