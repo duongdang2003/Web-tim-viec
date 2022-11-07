@@ -1,0 +1,47 @@
+body {
+	background-color: lightblue;
+}
+.col-1-5 {
+	max-width: 12.5%;
+	flex: 0 0 12.5%;
+}
+.col-2-5 {
+	max-width: 20.83333%;
+	flex: 0 0 20.83333%;
+}
+.col-3-5 {
+	max-width: 29.16667%;
+	flex: 0 0 29.16667%;
+}
+.col-4-5 {
+	max-width: 37.5%;
+	flex: 0 0 37.5%;
+}
+.col-5-5 {
+	width: 45.83333%;
+	flex: 0 0 45.83333%;
+}
+.col-6-5 {
+	width: 54.16667%;
+	flex: 0 0 54.16667%;
+}
+.col-7-5 {
+	width: 62.5%;
+	flex: 0 0 62.5%;
+}
+.col-8-5 {
+	width: 70.83333%;
+	flex: 0 0 70.83333%;
+}
+.col-9-5 {
+	width: 79.16667%;
+	flex: 0 0 79.16667%;
+}
+.col-10-5 {
+	width: 87.5%;
+	flex: 0 0 87.5%;
+}
+.col-11-5 {
+	width: 95.8333%;
+	flex: 0 0 95.8333%;
+}
