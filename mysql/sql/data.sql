@@ -1,71 +1,58 @@
 -- Active: 1666027514587@@127.0.0.1@3306@webtimviec
 CREATE DATABASE IF NOT EXISTS `WebTimViec` DEFAULT CHARACTER SET utf8 COLLATE utf8_unicode_ci;
 USE `WebTimViec`;
-
 create table NguoiTimViec(
-	id int primary key auto_increment not null,
-	userName nvarchar(30) not null,
-	loginName varchar(100) not null,
-	password varchar(100) not null,
-	mail varchar(50),
-	soluongbaidang int
+	ID_user INT auto_increment NOT NULL,
+	HoTen nvarchar(30) NOT NULL,
+	SDT varchar(12) NOT NULL,
+	email varchar(50) NOT NULL,
+	MXH varchar(50) ,
+	CV INT NOT NULL,
+	introduce nvarchar(2000) NOT NULL,
+	PRIMARY KEY (ID_user)
 );
-create table BaiTimViec(
-	idbaitimviec varchar(10) primary key not null,
-	ngaydang date,
-	tenbaiviet nvarchar(100),
-	id int not null,
-	foreign key(id) references NguoiTimViec(id)
+create table CongTy(
+	ID_CongTy int primary key auto_increment not null,
+	TenCongTy nvarchar(30) not null, 
+	ViTri nvarchar(40) not null,
+	SDT varchar(12) not null,
+	email varchar(30) not null,
+	MXH nvarchar(50) ,
+	mota nvarchar(2000) not null,
+	diem int default 0,
+	soluongdanhgia int default 0
 );
-create table GoiyVieclam(
-	nganhnghe nvarchar(50),
-	kinang nvarchar(100),
-	kinhnghiem nvarchar(100),
-	trinhdochuyenmon nvarchar(100),
-	trinhdotienganh nvarchar(20),
-	hovaten nvarchar(30),
-	namsinh date,
-	gioitinh tinyint,
-	quequan nvarchar(20),
-	congviec nvarchar(30),
-	mucluong decimal(15,2),
-	diadiemlamviec nvarchar(50),
-	lamviectainuocngoai nvarchar(20),
-	aboutyou nvarchar(2000),
-	mongmuon nvarchar(1000),
-	id int not null,
-	idbaitimviec varchar(10),
-	foreign key(id) references NguoiTimViec(id),
-	foreign key(idbaitimviec) references BaiTimViec(idbaitimviec)
+create table Client(
+	TenDangNhap varchar(50) primary key not null,
+	matkhau varchar(30) not null,
+	ID_user int not null,
+	foreign key (ID_user) references NguoiTimViec(ID_user)
 );
-create table NhaTuyenDung(
-	mantd varchar(10) primary key not null,
-	tenntd nvarchar(30) not null,
-	soluongbaidang int
+create table Admin(
+	TenDangNhap varchar(50) primary key not null,
+	matkhau varchar(30) not null,
+	ID_CongTy int not null,
+	foreign key (ID_CongTy) references CongTy(ID_CongTy)
 );
-create table in4NTD(
-	diachi nvarchar(35) not null,
+create table TuyenDung(
+	ID_TuyenDung int primary key auto_increment not null,
+	mota nvarchar(1000) not null,
+	loaicongviec nvarchar(20) not null,
+	luong decimal(15,2) not null,
+	chucvu nvarchar(40) not null,
+	quyenloi nvarchar(50),
 	linhvuc nvarchar(30) not null,
-	mantd varchar(10),
-	foreign key(mantd) references NhaTuyenDung(mantd)
+	yeucaukinang nvarchar(100) ,
+	yeucaucapbac nvarchar(50) ,
+	ID_CongTy int not null,
+	foreign key (ID_CongTy) references CongTy(ID_CongTy)
 );
-create table BaiTuyenDung(
-	idbaituyendung varchar(10) primary key not null,
-	ngaydang date,
-	tenbai nvarchar(50),
-	mantd varchar(10),
-	foreign key(mantd) references NhaTuyenDung(mantd)
+create table PhanHoi(
+	STT int primary key auto_increment not null,
+	ketqua int not null default -1,
+	ID_TuyenDung int not null,
+	ID_user INT not null,
+	solanapply int default 0 not null,
+	foreign key (ID_user) references NguoiTimViec(ID_user),
+	foreign key (ID_TuyenDung) references TuyenDung(ID_TuyenDung)
 );
-create table TimViec(
-	id int not null,
-	mantd varchar(10) not null,
-	foreign key(id) references NguoiTimViec(id),
-	foreign key(mantd) references NhaTuyenDung(mantd),
-	primary key(id,mantd)
-);
-
-insert into NguoiTimViec(id,username,loginName,password,mail,soluongbaidang)
-values(01,'khoa','phamduykhoa','duykhoa1303','pham.duykhoa1303@gmail.com',2),
-	(02,'dang','duongdang','dang123456','Dang@gmail.com',3),
-	(03,'Nam','nhatnam','nam123','Nam@gmail.com',0),
-	(04,'hien','thuhien','hien777','hien@gmail.com',4);
