@@ -7,11 +7,11 @@
 
 
 ## 🙋‍♂️ Cấu trúc thư mục
--  ###Thư mục mysql chưa **cơ sở dữ liệu** của Web.
+-  Thư mục mysql chưa **cơ sở dữ liệu** của Web.
 
--  ###Thư mục www chứa source code chính của đồ án.
+-  Thư mục www chứa source code chính của đồ án.
 
--  ###Trong thư mục www có các thư mục và file lần lượt là:
+-  Trong thư mục www có các thư mục và file lần lượt là:
     * **admin:** chứa file db.php kết nối với database.
 
     * **assets:** chứa các thư mục để lưu ảnh, style, script, font và template của Web.
