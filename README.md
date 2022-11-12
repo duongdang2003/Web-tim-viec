@@ -1,4 +1,33 @@
-# Note
+<br>
+<div align="center"><img src="https://i.imgur.com/rycgsaj.png" width="100px"></div>
+<h1 align="center" style="font-size:300%">ĐỒ ÁN CUỐI KỲ</h1>
+<h1 align="center" style="font-size:250%;">Web tìm kiếm việc làm</h1>
+<h1 align="center"><img src="https://raw.githubusercontent.com/MartinHeinz/MartinHeinz/master/wave.gif" width="30px">BackEnd<img src="https://raw.githubusercontent.com/MartinHeinz/MartinHeinz/master/wave.gif" width="30px"></h1>
+<h3 align="center" style="color:gray">Folder được cấu hình theo mô hình MVC.</h3>
+
+
+## 🙋‍♂️ Cấu trúc thư mục
+-  ###Thư mục mysql chưa **cơ sở dữ liệu** của Web.
+
+-  ###Thư mục www chứa source code chính của đồ án.
+
+-  ###Trong thư mục www có các thư mục và file lần lượt là:
+    * **admin:** chứa file db.php kết nối với database.
+
+    * **assets:** chứa các thư mục để lưu ảnh, style, script, font và template của Web.
+
+    * **Conrollers:** Chứa các file quản lí và điều phối hoạt động của Web, lớp này sẽ nhận request từ client, điều phối các Models và Views để trả về kết quả cho người dùng.
+
+    * **Models:** Chứa các file php quản lí cơ sở dữ liệu: giao tiếp với cơ sở dữ liệu, lưu trữ và truy vấn.
+
+    * **Views:** Chứa các file giao diện ứng dụng, biểu diễn dữ liệu của ứng dụng thành dạng có thể thấy được cho người dùng.
+
+    * **index.php:** Đây là file trang chủ mặc định của ứng dụng Web.
+
+    * **Main.js và style.css:** tất cả các js và css của index.php viết trong này.
+
+<h1 align="center"><img src="https://raw.githubusercontent.com/MartinHeinz/MartinHeinz/master/wave.gif" width="30px">FrontEnd<img src="https://raw.githubusercontent.com/MartinHeinz/MartinHeinz/master/wave.gif" width="30px"></h1>
+
 ## Mẫu layout
 Mẫu được để trong mục Template mn bấm vào để xem nha
 Trong đó gồm file:
