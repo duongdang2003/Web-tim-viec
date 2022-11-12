@@ -7,7 +7,7 @@
 
 
 ## 🙋‍♂️ Cấu trúc thư mục
--  Thư mục mysql chưa **cơ sở dữ liệu** của Web.
+-  Thư mục mysql chứa **cơ sở dữ liệu** cho Web.
 
 -  Thư mục www chứa source code chính của đồ án.
 
