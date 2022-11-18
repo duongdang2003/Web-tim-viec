@@ -77,4 +77,5 @@ insert into CongTy(
 		mota,
 		linkava
 	)
-values("FPT","HCM","0877964531","fpt@gmail.com","facebook.com","Đây là công ty fpt","server/www/user/ava.png")
+values("FPT","Hồ Chí Minh","0877964531","fpt@gmail.com","facebook.com/fpt","Đây là công ty fpt",),
+("VNG","Hồ Chí Minh","0562953108","vng@gmail.com","facbook.com/vng","Đây là công ty VNG",)
