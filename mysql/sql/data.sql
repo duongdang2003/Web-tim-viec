@@ -66,6 +66,7 @@ create table PhanHoi(
 	foreign key (ID_user) references NguoiTimViec(ID_user),
 	foreign key (ID_TuyenDung) references TuyenDung(ID_TuyenDung)
 );
+-- alter 
 alter table NguoiTimViec auto_increment = 01;
 alter table CongTy auto_increment = 01;
 insert into CongTy(
@@ -77,5 +78,13 @@ insert into CongTy(
 		mota,
 		linkava
 	)
-values("FPT","Hồ Chí Minh","0877964531","fpt@gmail.com","facebook.com/fpt","Đây là công ty fpt",),
-("VNG","Hồ Chí Minh","0562953108","vng@gmail.com","facbook.com/vng","Đây là công ty VNG",)
+values("FPT","Hồ Chí Minh","0877964531","fpt@gmail.com","facebook.com/fpt","Đây là công ty fpt",'linkava'),
+("VNG","Hồ Chí Minh","0562953108","vng@gmail.com","facbook.com/vng","Đây là công ty VNG",'linkava'),
+("Google","America","0562953108","google@gmail.com","facbook.com/google","Đây là công ty google",'linkava'),
+("facebook","America","0562953108","facebook@gmail.com","facbook.com/facebook","Đây là công ty facebook",'linkava');
+
+insert into Admin(ID_CongTy,TenDangNhap,matkhau)
+values(01,'fpt','123456'),
+	  (02,'vng','123456'),
+	  (03,'google','123456'),
+	  (04,'facebook','123456');

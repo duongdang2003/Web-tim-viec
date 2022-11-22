@@ -1,7 +1,8 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-<meta charset="UTF-8" />
+	<meta charset="UTF-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<!-- Boostrap CDN -->
@@ -12,47 +13,45 @@
 	<!-- Jquery CDN -->
 	<script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
 	<!-- Custom.css -->
-	<link rel="stylesheet" href="./test/Style/custom.css">
+	<link rel="stylesheet" href="./Style/custom.css">
 	<!-- navbar.css -->
-	<link rel="stylesheet" href="./test/Style/navbar.css">
+	<link rel="stylesheet" href="./Style/navbar.css">
 	<!-- content1.css.css -->
-	<link rel="stylesheet" href="./test/Style/content1.css">
+	<link rel="stylesheet" href="./Style/content1.css">
 	<!-- content3.css.css -->
-	<link rel="stylesheet" href="./test/Style/content3.css">
+	<link rel="stylesheet" href="./Style/content3.css">
 	<!-- content2.css -->
-	<link rel="stylesheet" href="./test/Style/content2.css">
+	<link rel="stylesheet" href="./Style/content2.css">
 	<!-- footer.css -->
-	<link rel="stylesheet" href="./test/Style/footer.css">
+	<link rel="stylesheet" href="./Style/footer.css">
 	<!-- reponsive.css -->
-	<link rel="stylesheet" href="./test/Style/reponsive.css">
+	<link rel="stylesheet" href="./Style/reponsive.css">
 	<!-- font-awesome -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-	<title>FindWork</title>
+	<title>Document</title>
 </head>
 
 <body>
-	<!-- <h1>MVC Example</h1>
-	<h3>Menu:</h3>
-	<h3>1. <a href="./Controllers/C_student.php">Quan li hoc sinh</a></h3> -->
-
 	<div id="main">
 		<?php
-		include './test/navbar.php'
+		include './navbar.php'
 		?>
 		<?php
-		include './test/content1.php'
+		include './content1.php'
 		?>
 		<?php
-		include './test/content3.php'
+		include './content3.php'
 		?>
 		<?php
-		include './test/content2.php'
+		include './content2.php'
 		?>
 		<?php
-		include './test/footer.php'
+		include './footer.php'
 		?>
 	
 	</div>
 </body>
-<script src="./test/Script/script.js"></script>
+
+<script src="./Script/script.js"></script>
+
 </html>
