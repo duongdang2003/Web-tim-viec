@@ -1,6 +1,6 @@
 <?php
 session_start();
-$homePage = '../index.php';
+$homePage = '../views/layouts/application.php';
 if (isset($_SESSION['taikhoan']) && isset($_SESSION['matkhau'])) {
     header("Location: $homePage");
     exit();
@@ -48,7 +48,7 @@ if (isset($_POST['SignIn'])) {
             $_SESSION['matkhau'] = $matkhau;
         }
         if ($canLogin) {
-            header("Location: ../index.php");
+            header("Location: ../views/layouts/application.php");
         } else {
             require_once("../views/login.php");
             require_once("../views/Wronglogin.php");
