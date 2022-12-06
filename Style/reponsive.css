@@ -15,7 +15,9 @@
     .col-ungtuyenngay{
         margin-top: 10px;
     }
- 
+    .p-money, .p-time, .p-time, .p-request, .p-diadiem{
+        font-size: 17px;
+    }
 }
 @media (max-width: 575.98px){
     *{
@@ -69,7 +71,7 @@
         font-size: 16px;
     }
     #footer{
-        height: 100px;
+        height: 90px;
     }
 
 }
@@ -95,7 +97,7 @@
         font-size: 16px;
     }
     #footer{
-        height: 110px;
+        height: 100px;
     }
 
 }

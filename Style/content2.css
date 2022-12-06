@@ -1,12 +1,21 @@
 /*css content-2*/
 	/*css content-2 left*/	
 	.card-format-border-left{
-		border: 2px solid rgba(0,0,0,.125);
-		border-radius: 10px;
+		/* border: 2px solid rgba(0,0,0,.125); */
+		border-radius: 10px;		
+		border-top: 1px solid #fff;
+		border-left: 1px solid #fff;
+		box-shadow: 6px 6px 12px rgb(0 0 0 / 22%);
 	}
 	.p-money{
 		margin-left: 5px;
-		font-size: 17px;
+		font-size: 18px;
+		display: inline-block;
+	}
+	.col-money{
+		margin-right: 40px;
+	}
+	.col-time, .col-money{
 		display: inline-block;
 	}
 
@@ -17,7 +26,7 @@
 	}
 	.p-time{
 		margin-left:2px;
-		font-size: 17px;
+		font-size: 18px;
 		display: inline-block;
 	}
 	.p-request{
@@ -25,7 +34,7 @@
 		border: 1px solid #000;
 		margin-right: 8px;
 		margin-top: 5px;
-		font-size: 17px;
+		font-size: 18px;
 		border-radius: 5px;
 		padding: 0 10px;
 	}
@@ -42,12 +51,12 @@
 	} */	
 	.p-diadiem{
 		margin-left:5px;
-		font-size: 17px;
+		font-size: 18px;
 		display: inline-block;
 	}
 
 	.p-timeleft{
-		font-size: 17px;
+		font-size: 18px;
 		font-style: italic;
 		color: #969696
 	}
@@ -70,10 +79,25 @@
 	
 	/*css content-2 right*/
 	.col-content2-right{
-		border: 2px solid rgba(0,0,0,.125);
+		/* border: 2px solid rgba(0,0,0,.125); */
 		border-radius: 10px;
-		
+		border-top: 1px solid rgba(0,0,0,.125);
+		border-left: 1px solid rgba(0,0,0,.125);
+		box-shadow: 6px 6px 12px rgb(0 0 0 / 22%);
+		height: 100%;
+
 	}
+	.sticky {
+		position: sticky!important;
+		position: -webkit-sticky!important;
+		top: 80px;
+	}
+	/* .col-content2-right-a11yFix{
+		position: sticky!important;
+		position: -webkit-sticky!important;
+		top: 1rem
+	} */
+	
 	.ds-row{
 		padding-right: 30px;
 	}
@@ -99,8 +123,6 @@
 		outline: none;
 	}
 	.col-content2-left{
-		overflow-y:auto;
-		height: 100vh;
 		cursor: pointer;
 	}
 	.col-content2-right-above{
@@ -110,7 +132,7 @@
 		padding-top: 10px;
 	}
 	.col-motacongviecdaydu{
-		height: calc(100vh - 209px);
+		height: calc(100vh - 244px);
         overflow-y:auto;
 	}
 	.col-motacongviecdaydu::-webkit-scrollbar, .col-content2-left::-webkit-scrollbar{ 
@@ -160,3 +182,89 @@
 	}
 
 
+/* css for userlogin */
+	.format-img-userxinviec{
+		width: 60px;
+		height: 50px;
+		margin-right: 20px;
+	}
+
+	.format-img-userxinviec-right{
+		width: 110px;
+		height: 110px;
+		margin-bottom: 15px;
+		margin-top: 20px;
+	}
+
+	.infor-userxinviec{
+		text-align: center;
+		align-items: center;
+		width: 100%;
+		border-bottom: none;
+		box-shadow: none;
+		background: linear-gradient(to top , #fff 50%, #000 50%);
+		height: 250px;
+		padding-bottom: 10px;
+		padding-top: 10px;
+	}
+	.card-info-userxinviec{
+		border-bottom: 1px solid #ccc;
+		height: 100%;
+		margin:  0 20px;
+	}
+	.format-img-cake, .format-img-gender{
+		width: 20px;
+		height: 20px;
+		margin-bottom: 8px;
+		margin-right: 10px;
+	}
+
+	.card-basicinfo{
+		margin: 0 10px;
+	}
+	.card-muctieu{
+		margin-left: 10px;
+	}
+	.format-img-call, .format-img-letter{
+		width: 22px;
+		height: 18px;
+		margin-bottom: 8px;
+		margin-right: 10px;
+	}
+
+	.format-mt-item{
+		margin-top: 14px;
+	}
+	
+	.format-img-place{
+		width: 18px;
+		height: 18px;
+		margin-right: 10px;
+	}
+	.format-span-img-cake, .format-span-img-gender, .format-span-img-letter, .format-span-img-call{
+		display: inline-block;
+	}
+	.format-span-img-cake{
+		margin-right: 120px;
+	}
+	.format-span-img-call{
+		margin-right: 90px;
+	}
+	.col-muctieu{
+		margin-top: 30px;
+	}
+	.col-tuyenngay{
+		margin-top: 10px;
+		text-align: center;
+		align-items: center;
+		margin-bottom: 20px;
+	}	
+	.btn-tuyenngay{
+		margin-top: -5px;
+		font-size: 16px;
+		border-radius: 10px;
+		background-color: #000;
+	}
+	.col-basicinfo{
+		height: calc(100vh - 344px);
+	}

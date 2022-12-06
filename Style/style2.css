@@ -1,0 +1,40 @@
+html, body {
+	width: 100%;
+	height: 100%;
+	font-family: Calibri;
+	font-size: 16px;	
+}
+h1{
+    font-size: 1.8rem;	
+    font-weight: bold;
+
+}
+.bg {
+    background: #FAF9F8;
+    width: 100%;
+	height: 100%;
+}
+.row-container {
+    background: white;
+	border: #707070 solid 1px ;
+	border-radius: 5px;
+
+}
+
+button{
+    margin: 10px 0 0 0;
+    width: 50%;
+    height: 40px;
+    color:white;
+    font-size: 1.2rem;
+    border: none;
+    background: black;
+    border-radius: 4px;
+    }
+
+label {
+    font-weight: bold;
+}
+input{
+    background: #FAF9F8;
+}

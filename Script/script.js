@@ -14,6 +14,8 @@ function autocomplete(inp, arr) {
         a = document.createElement("DIV");
         a.setAttribute("id", this.id + "autocomplete-list");
         a.setAttribute("class", "autocomplete-items");
+        a.setAttribute("style", "border-radius: 5px");
+    
         /*append the DIV element as a child of the autocomplete container:*/
         this.parentNode.appendChild(a);
         /*for each item in the array...*/
@@ -22,6 +24,7 @@ function autocomplete(inp, arr) {
           if (arr[i].substr(0, val.length).toUpperCase() == val.toUpperCase()) {
             /*create a DIV element for each matching element:*/
             b = document.createElement("DIV");
+            b.setAttribute("style", "border-radius: 5px");
             /*make the matching letters bold:*/
             b.innerHTML = "<strong>" + arr[i].substr(0, val.length) + "</strong>";
             b.innerHTML += arr[i].substr(val.length);
@@ -184,3 +187,24 @@ function autocomplete(inp, arr) {
       suggestlistitemLink($("#myInput3"), $(".filter-dropdownlist-mucluong li"));
       suggestlistitemLink($("#myInput4"), $(".filter-dropdownlist-hinhthuc li"));
       suggestlistitemLink($("#myInput5"), $(".filter-dropdownlist-diadiem li")); 
+
+      window.onscroll = function() {myFunction()};
+
+      var a = document.getElementById("col-centent2-right-scroll");
+      
+      function myFunction() {
+        if (window.pageYOffset > 300) {
+          a.classList.add("sticky");
+        } else {
+          a.classList.remove("sticky");
+        }
+      }
+
+      function changeLink(){
+          if(window.location == "http://localhost:3000/nguoitimviecdathich.php")
+          { 
+            window.location.href = 'http://localhost:3000/pageinfouser.php';
+          }
+      }
+
+      
