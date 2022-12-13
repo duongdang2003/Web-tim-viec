@@ -1,5 +1,5 @@
 .mask{
-   background-color: rgba(0, 0, 0, 0.7); 
+   background-color: rgba(0, 0, 0, 0.85); 
    height: 100%
 }
 .brand{
@@ -49,11 +49,15 @@
 	line-height: 55px;
 	
 }
+#myInput, #myInput1{
+	border-top-right-radius: 5px;
+	border-bottom-right-radius: 5px;
+}
 .text-tiemkiem, .text-diadiem{
 	background-color: #fff;
 	color: black;
 	font-weight: bold;
-	border-radius: 0;
+	border-radius: 7px;
 }
 .form-container{
 	position: relative;

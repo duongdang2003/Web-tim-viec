@@ -12,19 +12,19 @@
 	<!-- Jquery CDN -->
 	<script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
 	<!-- Custom.css -->
-	<link rel="stylesheet" href="./test/Style/custom.css">
+	<link rel="stylesheet" href="./src/assets/Styles/custom.css">
 	<!-- navbar.css -->
-	<link rel="stylesheet" href="./test/Style/navbar.css">
+	<link rel="stylesheet" href="./src/assets/Styles/navbar.css">
 	<!-- content1.css.css -->
-	<link rel="stylesheet" href="./test/Style/content1.css">
+	<link rel="stylesheet" href="./src/assets/Styles/content1.css">
 	<!-- content3.css.css -->
-	<link rel="stylesheet" href="./test/Style/content3.css">
+	<link rel="stylesheet" href="./src/assets/Styles/content3.css">
 	<!-- content2.css -->
-	<link rel="stylesheet" href="./test/Style/content2.css">
+	<link rel="stylesheet" href="./src/assets/Styles/content2.css">
 	<!-- footer.css -->
-	<link rel="stylesheet" href="./test/Style/footer.css">
+	<link rel="stylesheet" href="./src/assets/Styles/footer.css">
 	<!-- reponsive.css -->
-	<link rel="stylesheet" href="./test/Style/reponsive.css">
+	<link rel="stylesheet" href="./src/assets/Styles/reponsive.css">
 	<!-- font-awesome -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<title>FindWork</title>
@@ -37,22 +37,11 @@
 
 	<div id="main">
 		<?php
-		include './test/navbar.php'
+			require_once("./src/Views/layouts/application.php");
 		?>
-		<?php
-		include './test/content1.php'
-		?>
-		<?php
-		include './test/content3.php'
-		?>
-		<?php
-		include './test/content2.php'
-		?>
-		<?php
-		include './test/footer.php'
-		?>
-	
 	</div>
 </body>
-<script src="./test/Script/script.js"></script>
+<script src="./src/assets/Scripts/script.js"></script>
+<script src="./src/assets/Scripts/content2.js"></script>
+<script src="./src/assets/Scripts/content3.js"></script>
 </html>

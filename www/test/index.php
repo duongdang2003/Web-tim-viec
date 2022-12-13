@@ -33,9 +33,7 @@
 
 <body>
 	<div id="main">
-		<?php
-		include './navbar.php'
-		?>
+		<?php include './navbar.php' ?>
 		<?php
 		include './content1.php'
 		?>

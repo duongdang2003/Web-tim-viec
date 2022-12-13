@@ -12,13 +12,15 @@
 -  Thư mục www chứa source code chính của đồ án.
 
 -  Trong thư mục www có các thư mục và file lần lượt là:
-    * **admin:** chứa file db.php kết nối với database.
+    * **admin:** chứa file php hỗ trợ backup và recovery database.
 
     * **assets:** chứa các thư mục để lưu ảnh, style, script, font và template của Web.
 
     * **Conrollers:** Chứa các file quản lí và điều phối hoạt động của Web, lớp này sẽ nhận request từ client, điều phối các Models và Views để trả về kết quả cho người dùng.
 
     * **Models:** Chứa các file php quản lí cơ sở dữ liệu: giao tiếp với cơ sở dữ liệu, lưu trữ và truy vấn.
+
+    * **test:** chứa các file của bên front end để test trong lúc lập trình.
 
     * **Views:** Chứa các file giao diện ứng dụng, biểu diễn dữ liệu của ứng dụng thành dạng có thể thấy được cho người dùng.
 

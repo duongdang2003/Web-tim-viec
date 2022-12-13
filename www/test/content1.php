@@ -1,5 +1,5 @@
 <div class="content-1">
-    <div class="bg-image shadow-1-strong rounded search-content" style="background-image: url('../test/Images/homepage_background.jpg');">
+    <div class="bg-image shadow-1-strong rounded search-content" style="background-image: url('./test/Images/homepage_background.jpg');">
         <div class="mask">
             <div class="d-flex justify-content-center h-100">
                 <div class="container container-content-1">

@@ -25,7 +25,8 @@ services:
     phpmyadmin:
         image: phpmyadmin/phpmyadmin:latest
         ports:
-            - 8888:80
+            - 3306:80 
+            # port default is 8888
         restart: always
         environment:
             - PMA_HOST=mysql-server

@@ -1,0 +1,15 @@
+id baidang
+ten cong ty
+luong
+thanh pho
+tencongviec
+
+motacongviec
+chucvu
+quyenloi
+yeucaubangcap
+yeucaucongviec
+nganhnghe/linhvuc
+
+so luong tuyen 
+thoihan
