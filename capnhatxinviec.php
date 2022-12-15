@@ -17,7 +17,8 @@
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.1/dist/jquery.slim.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
   <link href="/Style/style2.css" rel="stylesheet">
-
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+  rel="stylesheet">
   <!-- My CSS and JQuery -->
   <!-- <link href="/style.css" rel="stylesheet"> -->
   <!-- <script type="text/javascript" src="./index.js"></script>  -->
@@ -26,15 +27,18 @@
   </style>
 </head>
 <body>
+  <nav class="navbar sticky-top navbar-dark bg-dark">
+    <a class="navbar-brand offset-sm-1" href="#" style="font-family:Ink Free, Regularl">FINDWORK</a>
+  </nav>
   <div class="container-fluid bg">
-    <div class="row justify-content-center">
-      <div class="col-xs-12 col-sm-10 row-container my-5">
+    <div class="row justify-content-center" style="background-color:#FAF9F8">
+      <div class="col-xs-12 col-sm-10 row-container my-5" >
         <form id="form" action="/" class="needs-validation my-4" novalidate>
             <h1 class="text-center">Cập nhật thông tin người xin việc</h1>
             <div class="d-sm-flex  flex-sm-row mt-4">
                 <div class="form-group col-sm-7">
                     <label for="name">Tên người xin việc</label>
-                    <input type="text" class="form-control py-3" id="name" placeholder="Nhập tên công việc ở đây" required>
+                    <input type="text" class="form-control py-3" id="name" placeholder="Nhập tên của bạn ở đây" required>
                 </div>
                 <div class="form-group col-sm-5">
                     <label for="namework">Công việc</label>
@@ -98,28 +102,40 @@
             </div>
             <div class="form-group col-12">
                 <label for="comment1">Mục tiêu nghề nghiệp</label>
-                <textarea class="form-control" rows="3" id="comment1" placeholder="Nhập mô tả ở đây" required></textarea>
+                <textarea class="form-control" rows="3" id="comment1" placeholder="Nhập mục tiêu nghề nghiệp ở đây" required></textarea>
             </div>
             <div class="form-group col-12">
                 <label for="comment2">Học vấn</label>
-                <textarea class="form-control" rows="3" id="comment2" placeholder="Nhập mô tả ở đây" required></textarea>
+                <textarea class="form-control" rows="3" id="comment2" placeholder="Nhập học vấn ở đây" required></textarea>
             </div>
             <div class="form-group col-12">
                 <label for="comment3">Kỹ năng</label>
-                <textarea class="form-control" rows="3" id="comment3" placeholder="Nhập mô tả ở đây" required></textarea>
+                <textarea class="form-control" rows="3" id="comment3" placeholder="Nhập kĩ năng ở đây" required></textarea>
             </div>
             <div class="form-group col-12">
                 <label for="comment4">Kinh nghiệm làm việc</label>
-                <textarea class="form-control" rows="3" id="comment4" placeholder="Nhập mô tả ở đây" required></textarea>
+                <textarea class="form-control" rows="3" id="comment4" placeholder="Nhập kinh nghiệm làm việc ở đây" required></textarea>
             </div>
             <div class="form-group col-12">
                 <label for="comment5">Chi tiết</label>
-                <textarea class="form-control" rows="3" id="comment5" placeholder="Nhập mô tả ở đây" required></textarea>
+                <textarea class="form-control" rows="3" id="comment5" placeholder="Link CV hoặc Portfolio của bạn ở đây" required></textarea>
             </div>
-            <div class="form-group">
-                <label for="tag">Thêm tag kĩ năng</label>
+
+            <div class="tag-input form-group col-7">
+              <div class="input">
+                  <label for="tag-ip">Thêm tag kĩ năng</label>
+                  <div class="d-flex flex-row">
+                      <input class="form-control mt-2" type="text" id="tag-ip" placeholder="Thêm ít nhất 2 kĩ năng yêu cầu">
+                      <span class="material-icons btn" value="" style="color:gray; font-size: 36px">
+                          add_circle_outline
+                          </span>
+                  </div>
+      
+              </div>
+              <div class="tag-list"></div>
+
             </div>
-            <div class="offset-sm-4">
+            <div class="offset-4">
                     <button type="submit" class="mx-auto">Đăng việc</button>
             </div>
         </div>
@@ -149,6 +165,41 @@
         });
       }, false);
     })();
+
+        //tag
+        let tags = [];
+    function addTag(e)
+    {
+        console.log(e);
+        //let tag = e.target.value.trim();
+        let tag = document.getElementById('tag-ip').value.trim()
+        if (tag.length < 1 || tags.includes(tag))
+        {
+            e.target.value = "";
+            return;
+        }
+        let index = tags.push(tag);
+        let tagItem = document.createElement("div");
+        tagItem.classList.add("item");
+        tagItem.innerHTML = `
+            <span class="delete-btn" onclick ="deleteTag(this,'${tag}')">&times;
+            </span>
+            <span>${tag}</span>
+        `;
+        document.querySelector(".tag-list").appendChild(tagItem);
+        e.target.value = "";
+    }
+
+    function deleteTag(ref, tag){
+        let parent = ref.parentNode.parentNode;
+        parent.removeChild(ref.parentNode);
+        let index = tags.indexOf(tag);
+        tags.splice(index);
+
+    }
+
+    document.querySelector(".material-icons").addEventListener("click",addTag);
+
     </script>
 </body>
 </html>	
