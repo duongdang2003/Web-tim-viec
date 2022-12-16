@@ -36,28 +36,58 @@
 		<div class="navbar-content sticky-top" id="navbar-content">
 			<nav class="navbar navbar-expand-lg navbar-dark px-4 format-nav">
 				<div class="container">
-					<a class="navbar-brand" href="#">FINDWORK</a>
+					<a class="navbar-brand" href="./userlogin.php">FINDWORK</a>
 					<button class="navbar-toggler" id="btn-menu" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
 						<span class="navbar-toggler-icon"></span>
 					</button>
 					<div class="collapse navbar-collapse" id="navbarNavDropdown">
 						<ul class="navbar-nav me-auto mt-2 mt-lg-0">
-
 							<li class="nav-item">
-								<a class="nav-link active" href="#">Đăng việc</a>
+								<a class="nav-link active" href="./dangviec.php">Đăng việc</a>
 							</li>
 
 						</ul>
-						<ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-							<a class="nav-link active format-name-user" href="#">Google</a>
-							<span>
-								<img class="format-img-user" src="./Images/google.png" alt="google"></span>
-							<div class="navbar-img-notice">
-								<span>
-									<img class="format-img-notice" src="./Images/ic_notifications_none_24px.png" alt="">
-								</span>
-							</div>
+						<ul class="navbar-nav  mr-auto mt-2 mt-lg-0">
+							<a class="nav-link active format-name-user">Google</a>
+							<div class="filter-dropdown-container-user">
+								<button class="format-btn-user" id="btn-user">
+									<span><img class="format-img-user" src="./Images/google.png" alt="google"></span>
+								</button>
+								<ul class="filter-dropdownlist-user" id="filter-btn-user">
 
+									<li class="filter-dropdownlistItem">
+
+										<a href="./capnhatdoanhnghiep.php" class="filter-dropdownlistitemLink">Chỉnh sửa thông tin</a>
+									</li>
+									<li class="filter-dropdownlistItem ormat-border-top">
+										<a href="./duyetcongviec.php" class="filter-dropdownlistitemLink">Duyệt công việc</a>
+									</li>
+									<li class="filter-dropdownlistItem format-border-top">
+										<a href="./congviecdathich.php" class="filter-dropdownlistitemLink">Công việc đã thích</a>
+									</li>
+									<li class="filter-dropdownlistItem format-border-top">
+										<span><i class="fa fa-sign-out" aria-hidden="true"></i></span>
+										<a href="#" class="filter-dropdownlistitemLink format-text-dropdown ">Đăng xuất</a>
+									</li>
+								</ul>
+							</div>
+							<div class="navbar-img-notice filter-dropdown-container-user">
+								<button class="btn-notice">
+									<span>
+										<img class="format-img-notice" src="./Images/ic_notifications_none_24px.png" alt="">
+									</span>
+								</button>
+								<ul class="filter-dropdownlist-notice" id="filter-btn-notice">
+									<li class="filter-dropdownlistItem">
+										<span><img class="format-img-user" src="./Images/18-F.png" alt=""></span>
+										<a href="#" class="filter-dropdownlistitemLink">William Shake đã phản hồi về yêu cầu tuyển dụng của bạn</a>
+									</li>
+									<li class="filter-dropdownlistItem format-border-top">
+										<span><img class="format-img-user" src="./Images/18-F.png" alt=""></span>
+										<a href="#" class="filter-dropdownlistitemLink">John Cena đã phản hồi về yêu cầu tuyển dụng của bạn</a>
+									</li>
+								</ul>
+							</div>
 						</ul>
 					</div>
 				</div>
@@ -309,7 +339,7 @@
 						</div>
 					</div>
 
-					<div class="d-none d-md-block col-md-5 col-lg-6 col-xl-7 col-content2-right col-content2-right-a11yFix" id="col-centent2-right-scroll"> 
+					<div class="d-none d-md-block col-md-5 col-lg-6 col-xl-7 col-content2-right col-content2-right-a11yFix" id="col-centent2-right-scroll">
 						<div class="row">
 							<div class="col-sm-12 infor-userxinviec">
 								<div class="card-info-userxinviec">
@@ -346,7 +376,7 @@
 											<div class="col-sm-12  mgl-col-content2-right-below format-mt-item">
 												<span><img class="format-img-place" src="./Images/ic_place_24px.png" alt="">19 Đ. Nguyễn Hữu Thọ, Tân Hưng, Quận 7, Thành phố Hồ Chí Minh</span>
 											</div>
-										
+
 											<div class="col-sm-12 mgl-col-content2-right-below col-muctieu">
 												<h5 class="card-title format-text-bold">Mục tiêu nghề nghiệp</h5>
 												<span>
@@ -417,10 +447,10 @@
 												<h5 class="card-title format-text-bold">Chi tiết</h5>
 												<span>
 													<p class="p-chitiet">
-													Xem CV: https://findwork/users/my-cv.com
+														Xem CV: https://findwork/users/my-cv.com
 													</p>
 													<p class="p-chitiet">
-													Xem Porfolio: https://findwork/users/my-portfolio.com
+														Xem Porfolio: https://findwork/users/my-portfolio.com
 													</p>
 												</span>
 											</div>
@@ -454,5 +484,6 @@
 </body>
 
 <script src="./Script/script.js"></script>
+<script src="./Script/script2.js"></script>
 
 </html>

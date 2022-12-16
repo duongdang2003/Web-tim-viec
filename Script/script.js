@@ -160,6 +160,7 @@ function autocomplete(inp, arr) {
 
 
       })
+   
 
       // $(function() { // Dropdown toggle
       //   $('.btn-filter-dropdown').click(function() { $(this).next('.filter-dropdownlist').slideToggle("fast");
@@ -205,6 +206,11 @@ function autocomplete(inp, arr) {
           { 
             window.location.href = 'http://localhost:3000/pageinfouser.php';
           }
-      }
+      } 
+
+    
+    
 
       
+
+     
