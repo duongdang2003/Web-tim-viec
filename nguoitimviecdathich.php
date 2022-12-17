@@ -55,7 +55,7 @@
 
                                         <a href="./capnhatdoanhnghiep.php" class="filter-dropdownlistitemLink">Chỉnh sửa thông tin</a>
                                     </li>
-                                    <li class="filter-dropdownlistItem ormat-border-top">
+                                    <li class="filter-dropdownlistItem format-border-top">
                                         <a href="./duyetcongviec.php" class="filter-dropdownlistitemLink">Duyệt công việc</a>
                                     </li>
                                     <li class="filter-dropdownlistItem format-border-top">

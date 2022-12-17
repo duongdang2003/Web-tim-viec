@@ -1,0 +1,49 @@
+.header{
+    width: 100%;
+    height: 250px;
+    background-image: url(/Images/google-company.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+
+}
+.format-col-info{
+    display: flex;
+    margin: -20px 20px;
+    z-index: 1000;
+}
+.col-img{
+    background-color: #fff;
+    border-radius: 100%;
+    padding: 10px 10px;
+}
+.format-nameComapy{
+    font-weight: 500;
+    margin: auto;
+    margin-left: 16px;
+    font-size: 30px;
+}
+.format-img-company{
+    width: 80px;
+    height: 80px;
+}
+.format-col-option
+{   
+    margin-top: 40px;
+    margin-bottom: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 100px;
+}
+.format-text{
+    text-decoration: none;
+    color: #000;
+    margin-right: 100px;
+    margin-top: 20px;
+    font-size: 19px;
+}
+hr{
+    margin-top: 0.5rem;
+    margin-bottom: 3rem;
+    border: 0;
+    border-top: 2px solid rgba(0, 0, 0, 0.1);
+}

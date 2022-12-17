@@ -52,7 +52,7 @@
 
                                         <a href="./capnhatdoanhnghiep.php" class="filter-dropdownlistitemLink">Chỉnh sửa thông tin</a>
                                     </li>
-                                    <li class="filter-dropdownlistItem ormat-border-top">
+                                    <li class="filter-dropdownlistItem format-border-top">
                                         <a href="./duyetcongviec.php" class="filter-dropdownlistitemLink">Duyệt công việc</a>
                                     </li>
                                     <li class="filter-dropdownlistItem format-border-top">
@@ -261,7 +261,7 @@
                     </div>
                     <div class="col-sm-12 col-duyetungvien">
                         <div class="col-sm-12 format-text-heading">
-                            <h4>CÔNG VIỆC ĐÃ GỬI YÊU CẦU TUYỂN DỤNG/h4>
+                            <h4>CÔNG VIỆC ĐÃ GỬI YÊU CẦU TUYỂN DỤNG</h4>
                         </div>
                         <div class="table-responsive">
                             <table class="table align-middle mb-0 bg-white format-table">
