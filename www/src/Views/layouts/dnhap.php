@@ -40,14 +40,21 @@ class FormLogin
                 <input name='matkhau' value='<?= $previousPass ?>' type="password" class="form-control py-4" id="password" required>
                 <div class="invalid-feedback">Vui lòng nhập mật khẩu.</div>
               </div>
+              <div class="form-group">
+                <label for="select">Bạn là</label>
+                <select class="form-control required" id="select" name="who" required>
+                  <option value="0" style="color:black !important;">Người xin việc</option>
+                  <option value="1" style="color:black !important;">Nhà tuyển dụng</option>
+                </select>
+              </div>
 
               <div class='form-group form-check'>
-            <input type='checkbox' name='remember' value='1' class='form-check-input' id='exampleCheck1'>
-            <label class='form-check-label' for='exampleCheck1'>Remember me</label>
-          </div>
+                <input type='checkbox' name='remember' value='1' class='form-check-input' id='exampleCheck1'>
+                <label class='form-check-label' for='exampleCheck1'>Remember me</label>
+              </div>
 
               <div class="pass">
-                <a href="#">Quên mật khẩu</a>
+                <a href="../../index.php">Quên mật khẩu</a>
               </div>
               <div class="offset-sm-4">
                 <button type="submit" class="mx-auto">Đăng nhập</button>

@@ -1,15 +1,8 @@
-id baidang
-ten cong ty
-luong
-thanh pho
-tencongviec
-
-motacongviec
-chucvu
-quyenloi
-yeucaubangcap
-yeucaucongviec
-nganhnghe/linhvuc
-
-so luong tuyen 
-thoihan
+them table congty:
+    phuc loi
+them table dangviec:
+    thoihan
+    yeucaucongviec
+    yeucaubangcap
+    quyenloi
+    soluongtuyendung

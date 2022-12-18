@@ -1,4 +1,3 @@
--- Active: 1666027514587@@127.0.0.1@3306@webtimviec
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
 CREATE DATABASE IF NOT EXISTS `WebTimViec` DEFAULT CHARACTER SET utf8 COLLATE utf8_unicode_ci;
@@ -15,33 +14,34 @@ drop table if exists CongTy;
 
 create table NguoiTimViec(
 	ID_user INT auto_increment NOT NULL,
-	hoten VARCHAR(100) not null,
-	linkava varchar(200) not null,
-	congviec varchar(100) NOT NULL,
-	ngaysinh date not null,
+	hoten VARCHAR(100) not null default "",
+	linkava varchar(500) not null default "",
+	congviec varchar(100) NOT NULL default "",
+	ngaysinh date not null default "2000-01-01",
 	gioitinh int(10) not null,
 	loaicongviec int(10) not null,
-	linhvuc varchar(100) not null,
-	thanhpho varchar(20) not null,
-	diachi varchar(50) not null,
-	muctieunghenghiep varchar(1000) not null,
-	hocvan varchar(500) not null,
-	kinang varchar(400) not null,
-	kinhnghiemlamviec varchar(1000) not null,
-	chitiet varchar(200) not null,
-	tagkinang varchar(200) not null,
+	linhvuc varchar(100) not null default "",
+	thanhpho varchar(20) not null default "",
+	diachi varchar(50) not null default "",
+	muctieunghenghiep varchar(1000) not null default "",
+	hocvan varchar(500) not null default "",
+	kinang varchar(400) not null default "",
+	kinhnghiemlamviec varchar(1000) not null default "",
+	chitiet varchar(200) not null default "",
+	tagkinang varchar(200) not null default "",
 	daxoa int(10) not null default 0,
 	PRIMARY KEY (ID_user)
 ) ENGINE = InnoDB DEFAULT CHARSET = utf8 COLLATE = utf8_unicode_ci;
 create table CongTy(
 	ID_CongTy int primary key auto_increment not null,
-	TenCongTy VARCHAR(50) not null,
-	diachi VARCHAR(40) not null,
-	website varchar(50) not null,
-	motacongty varchar(2000) not null,
-	linkava varchar(200) not null,
-	linhvuc varchar(100) not null,
-	thanhpho varchar(50) not null,
+	TenCongTy VARCHAR(50) not null default "",
+	diachi VARCHAR(40) not null default "",
+	website varchar(50) not null default "",
+	motacongty varchar(2000) not null default "",
+	linkava varchar(500) not null default "",
+	linhvuc varchar(100) not null default "",
+	thanhpho varchar(50) not null default "",
+	phucloi varchar(2000) not null default "",
 	daxoa int(10) not null default 0
 ) ENGINE = InnoDB DEFAULT CHARSET = utf8 COLLATE = utf8_unicode_ci;
 create table Client(
@@ -84,11 +84,12 @@ create table DangViec(
 	foreign key (ID_CongTy) references CongTy(ID_CongTy)
 )ENGINE = InnoDB DEFAULT CHARSET = utf8 COLLATE = utf8_unicode_ci;
 create table UngTuyen(
-	maungtuyen int primary key auto_increment not null,
+	maungtuyen int auto_increment not null,
 	daduyet int not null,
 	ID_BaiDang int not null,
 	ID_user INT not null,
 	daxoa int(10) not null default 0,
+	primary key(maungtuyen),
 	foreign key (ID_user) references NguoiTimViec(ID_user),
 	foreign key (ID_BaiDang) references DangViec(ID_BaiDang)
 )ENGINE = InnoDB DEFAULT CHARSET = utf8 COLLATE = utf8_unicode_ci;
@@ -109,9 +110,11 @@ create table LuuNTV(
 create table LuuCT(
 	ID_user int not null,
 	ID_CongTy int not null,
-	primary key(ID_user,ID_CongTy),
+	ID_BaiDang int not null,
+	primary key(ID_user,ID_CongTy,ID_BaiDang),
 	foreign key (ID_user) references NguoiTimViec(ID_user),
-	foreign key (ID_CongTy) references CongTy(ID_CongTy)
+	foreign key (ID_CongTy) references CongTy(ID_CongTy),
+	foreign key (ID_BaiDang) references DangViec(ID_BaiDang)
 );
 -- alter 
 alter table NguoiTimViec auto_increment = 01;
@@ -134,7 +137,7 @@ values(
 		"Hồ Chí Minh",
 		"fpt.com",
 		"mo ta cong ty fpt",
-		"linkava",
+		"../../../src/assets/Images/google.png",
 		"cong nghe thong tin",
 		"Hồ Chí Minh"
 	),
@@ -143,7 +146,7 @@ values(
 		"Hồ Chí Minh",
 		"vng.com",
 		"mo ta cong ty vng",
-		"linkava",
+		"../../../src/assets/Images/google.png",
 		"cong nghe thong tin",
 		"Đà Nẵng"
 	),
@@ -152,7 +155,7 @@ values(
 		"America",
 		"google.com",
 		"mo ta cong ty google",
-		"linkava",
+		"../../../src/assets/Images/google.png",
 		"cong nghe thong tin",
 		"Quãng Nam"
 	),
@@ -161,7 +164,7 @@ values(
 		"America",
 		"facebook.com",
 		"mo ta cong ty facebook",
-		"linkava",
+		"../../../src/assets/Images/google.png",
 		"cong nghe thong tin",
 		"Nghệ An"
 	),
@@ -170,7 +173,7 @@ values(
 		"SouthAmerica",
 		"amazon.com",
 		"mo ta cong ty",
-		"linkava",
+		"../../../src/assets/Images/google.png",
 		"ban hang",
 		"america"
 	),
@@ -179,7 +182,7 @@ values(
 		"America",
 		"tencent.com",
 		"mo ta cong ty tencent",
-		"linkava",
+		"../../../src/assets/Images/google.png",
 		"cong nghe thong tin",
 		"Hồ Chí Minh"
 	),
@@ -188,7 +191,7 @@ values(
 		"America",
 		"topcv.com",
 		"mo ta cong ty topcv",
-		"linkava",
+		"../../../src/assets/Images/google.png",
 		"cong nghe thong tin",
 		"Hồ Chí Minh"
 	),
@@ -197,7 +200,7 @@ values(
 		"America",
 		"theanh28.com",
 		"mo ta cong ty theanh28",
-		"linkava",
+		"../../../src/assets/Images/google.png",
 		"cong nghe thong tin",
 		"Hồ Chí Minh"
 	),
@@ -206,7 +209,7 @@ values(
 		"America",
 		"binance.com",
 		"mo ta cong ty binance",
-		"linkava",
+		"../../../src/assets/Images/google.png",
 		"cong nghe thong tin",
 		"Hồ Chí Minh"
 	),
@@ -215,7 +218,7 @@ values(
 		"America",
 		"coccoc.com",
 		"mo ta cong ty coccoc",
-		"linkava",
+		"../../../src/assets/Images/google.png",
 		"cong nghe thong tin",
 		"Hồ Chí Minh"
 	);
@@ -297,7 +300,7 @@ insert into NguoiTimViec(
 	)
 values(
 		"Phạm Duy Khoa",
-		"./assets/images/user/ava/ID_tendangnhap.jpg",
+		"../../../src/assets/Images/18-F.png",
 		"lập trình viên",
 		"2003-03-13",
 		1,
@@ -314,7 +317,7 @@ values(
 	),
 	(
 		"Dương Hải Đăng",
-		"./assets/images/user/ava/ID_tendangnhap.jpg",
+		"../../../src/assets/Images/18-F.png",
 		"lập trình viên",
 		"2004-01-01",
 		1,
@@ -331,7 +334,7 @@ values(
 	),
 	(
 		"Nguyễn Hoàng Nhật Nam",
-		"./assets/images/user/ava/ID_tendangnhap.jpg",
+		"../../../src/assets/Images/18-F.png",
 		"lập trình viên",
 		"2002-01-01",
 		1,
@@ -348,7 +351,7 @@ values(
 	),
 	(
 		"Trần Phúc Thịnh",
-		"./assets/images/user/ava/ID_tendangnhap.jpg",
+		"../../../src/assets/Images/18-F.png",
 		"lập trình viên",
 		"2005-01-01",
 		1,
@@ -365,7 +368,7 @@ values(
 	),
 	(
 		"Lê Hoàng Đức",
-		"./assets/images/user/ava/ID_tendangnhap.jpg",
+		"../../../src/assets/Images/18-F.png",
 		"lập trình viên",
 		"2001-01-01",
 		1,
@@ -448,7 +451,9 @@ insert into UngTuyen(
 	ID_BaiDang,
 	ID_user
 )
-values(-1,01,02);
+values(-1,01,01),
+	  (1,02,01),
+	  (0,03,01);
 
 insert into LuuNTV()
 values(01,02),
@@ -457,10 +462,10 @@ values(01,02),
 	(03,02);
 
 insert into LuuCT()
-values(01,02),
-	(01,03),
-	(02,01),
-	(03,02);
+values(01,02,02),
+	(01,03,05),
+	(02,01,01),
+	(03,02,02);
 
 insert into CongViecDuocMoi
 values(01,02,-1),

@@ -183,10 +183,12 @@ function autocomplete(inp, arr) {
           });
         });
       };
-      suggestlistitemLink($("#myInput2"), $(".filter-dropdownlist-linhvuc li"));
-      suggestlistitemLink($("#myInput3"), $(".filter-dropdownlist-mucluong li"));
-      suggestlistitemLink($("#myInput4"), $(".filter-dropdownlist-hinhthuc li"));
-      suggestlistitemLink($("#myInput5"), $(".filter-dropdownlist-diadiem li")); 
+$(document).ready(function(){
+  suggestlistitemLink($("#myInput2"), $(".filter-dropdownlist-linhvuc li"));
+  suggestlistitemLink($("#myInput3"), $(".filter-dropdownlist-mucluong li"));
+  suggestlistitemLink($("#myInput4"), $(".filter-dropdownlist-hinhthuc li"));
+  suggestlistitemLink($("#myInput5"), $(".filter-dropdownlist-diadiem li")); 
+})
 
       window.onscroll = function() {myFunction()};
 

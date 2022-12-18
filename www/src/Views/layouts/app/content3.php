@@ -32,7 +32,7 @@
 												<p class="card-text p-money">100.000.000đ/tháng</p>
 											</div>
 											<div class="col-time">
-												<span><img class="img-time" src="./test/Images/time.jpg" alt=""></span>
+												<span><img class="img-time" src="../../../../src/assets/Images/time.jpg" alt=""></span>
 												<span class="card-text p-time">Toàn thời gian</span>
 											</div>
 										</div>
@@ -82,7 +82,7 @@
 												<p class="card-text p-money">100.000.000đ/tháng</p>
 											</div>
 											<div class="col-time">
-												<span><img class="img-time" src="./test/Images/time.jpg" alt=""></span>
+												<span><img class="img-time" src="../../../../src/assets/Images/time.jpg" alt=""></span>
 												<span class="card-text p-time">Toàn thời gian</span>
 											</div>
 										</div>
@@ -133,7 +133,7 @@
 												<p class="card-text p-money">100.000.000đ/tháng</p>
 											</div>
 											<div class="col-time">
-												<span><img class="img-time" src="./test/Images/time.jpg" alt=""></span>
+												<span><img class="img-time" src="../../../../src/assets/Images/time.jpg" alt=""></span>
 												<span class="card-text p-time">Toàn thời gian</span>
 											</div>
 										</div>
@@ -183,7 +183,7 @@
 												<p class="card-text p-money">100.000.000đ/tháng</p>
 											</div>
 											<div class="col-time">
-												<span><img class="img-time" src="./test/Images/time.jpg" alt=""></span>
+												<span><img class="img-time" src="../../../../src/assets/Images/time.jpg" alt=""></span>
 												<span class="card-text p-time">Toàn thời gian</span>
 											</div>
 										</div>
@@ -233,7 +233,7 @@
 												<p class="card-text p-money">100.000.000đ/tháng</p>
 											</div>
 											<div class="col-time">
-												<span><img class="img-time" src="./test/Images/time.jpg" alt=""></span>
+												<span><img class="img-time" src="../../../../src/assets/Images/time.jpg" alt=""></span>
 												<span class="card-text p-time">Toàn thời gian</span>
 											</div>
 										</div>
@@ -283,7 +283,7 @@
 												<p class="card-text p-money">100.000.000đ/tháng</p>
 											</div>
 											<div class="col-time">
-												<span><img class="img-time" src="./test/Images/time.jpg" alt=""></span>
+												<span><img class="img-time" src="../../../../src/assets/Images/time.jpg" alt=""></span>
 												<span class="card-text p-time">Toàn thời gian</span>
 											</div>
 										</div>
@@ -332,7 +332,7 @@
 												<p class="card-text p-money">100.000.000đ/tháng</p>
 											</div>
 											<div class="col-time">
-												<span><img class="img-time" src="./test/Images/time.jpg" alt=""></span>
+												<span><img class="img-time" src="../../../../src/assets/Images/time.jpg" alt=""></span>
 												<span class="card-text p-time">Toàn thời gian</span>
 											</div>
 										</div>
@@ -469,4 +469,5 @@
 			</div>
 		</div>
 	</div>
+	<div class="container container-content-2" id="toggle"></div>
 </div>

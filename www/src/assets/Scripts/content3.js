@@ -39,11 +39,11 @@ function show_data(data) {
                             <span>
                                 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="80" height="80" viewBox="0 0 84 84">
                                     <defs>
-                                        <pattern id="pattern" preserveAspectRatio="none" width="100%" height="100%" viewBox="0 0 229 220">
-                                            <image width="200" height="160" xlink:href="../../../src/assets/Images/Company/google.png" />
+                                        <pattern id="pattern${i}" preserveAspectRatio="none" width="100%" height="100%" viewBox="0 0 229 220">
+                                            <image width="200" height="160" xlink:href="${data[i]["linkava"]}" />
                                         </pattern>
                                     </defs>
-                                    <rect id="" width="84" height="84" fill="url(#pattern)" />
+                                    <rect id="" width="84" height="84" fill="url(#pattern${i})" />
                                 </svg>
                             </span>
                         </div>
@@ -90,22 +90,30 @@ function show_data(data) {
 }
 function show_detail_data(data) {
   let detailJob = $("#col-centent2-right-scroll");
-  let motacongviec="";
-  let quyenloi="";
-  let yeucaucongviec="";
+  let motacongviec="<li>Không có mô tả</li>";
+  let quyenloi="<li>Không có thông tin</li>";
+  let yeucaucongviec="<li>Không yêu cầu</li>";
+  let yeucaubangcap = "Không có";
   let thoihan = new Date(data[0]["thoihan"]);
   thoihan = thoihan.toLocaleDateString()
   if (data[0]["motacongviec"]!=""){
+    motacongviec = ""
     let listmota = data[0]["motacongviec"].split("\n");
     for (i of listmota) motacongviec += `<li>${i}</li>`;
   }
-  if (data[0]["motacongviec"]!=""){
+  if (data[0]["quyenloi"]!=""){
+    quyenloi = ""
     let listquyenloi = data[0]["quyenloi"].split("\n");
     for (i of listquyenloi) quyenloi += `<li>${i}</li>`;
   }
-  if (data[0]["motacongviec"]!=""){
+  if (data[0]["yeucaucongviec"]!=""){
+    yeucaucongviec = ""
     let listyeucaucongviec = data[0]["yeucaucongviec"].split("\n");
     for (i of listyeucaucongviec) yeucaucongviec += `<li>${i}</li>`;
+  }
+  if (data[0]["yeucaubangcap"]!=""){
+    yeucaubangcap = ""
+    yeucaubangcap = data[0]["yeucaubangcap"];
   }
   let show = `
     <div class="row">
@@ -127,8 +135,8 @@ function show_detail_data(data) {
                                 <p class="card-text p-diadiem">${data[0]["thanhpho"]}</p>
                     </div>
                     <div class="col-md-12 col-lg-5 col-ungtuyenngay">
-                        <a class="btn btn-dark btn-outline-light btn-ungtuyenngay" tabindex="-1" role="button" href="../../../../routes.php?ungtuyenngay">Ứng tuyển ngay</a>
-                        <a class="btn-luuyeu-thich" id="btn-luuyeuthich" aria-haspopup="true" aria-expanded="false" href="../../../../routes.php?yeuthich">
+                        <a class="btn btn-dark btn-outline-light btn-ungtuyenngay" tabindex="-1" role="button" href="../../../../routes.php?ungtuyenngay=${data[0]["ID_BaiDang"]}">Ứng tuyển ngay</a>
+                        <a class="btn-luuyeu-thich" id="btn-luuyeuthich" aria-haspopup="true" aria-expanded="false" href="../../../../routes.php?yeuthich=${data[0]["ID_BaiDang"]}">
                             <span>
                                 <svg class="img-ungtuyenngay" width="50" height="40" role="img" aria-label="biểu tượng-lưu" focusable="false" viewBox="0 0 18 18">
                                     <g>
@@ -168,7 +176,7 @@ function show_detail_data(data) {
                     </div>
                     <div class="col-sm-12 mgl-col-content2-right-below">
                         <h6 class="card-title format-text-bold">Yêu cầu bằng cấp (tối thiểu):</h6>
-                        <p class="p-yeucaubangcap">${data[0]["yeucaubangcap"]}</p>
+                        <p class="p-yeucaubangcap">${yeucaubangcap}</p>
                     </div>
                     <div class="col-sm-12 mgl-col-content2-right-below">
                         <h6 class="card-title format-text-bold">Yêu cầu công việc:</h6>
@@ -226,9 +234,7 @@ $(function () {
 const formatter = new Intl.NumberFormat("en-US", {
   style: "currency",
   currency: "USD",
-  // These options are needed to round to whole numbers if that's what you want.
-  //minimumFractionDigits: 0, // (this suffices for whole numbers, but will print 2500.10 as $2,500.1)
-  maximumFractionDigits: 0, // (causes 2500.99 to be printed as $2,501)
+  maximumFractionDigits: 0,
 });
 
 // Sự kiện thay đổi các chi tiết công việc khi ấn vào
@@ -236,4 +242,8 @@ $(document).on("click", ".card-body", function (e) {
     let id = $(this).parent().attr('id');
     id = id.split('baidang')[1];
     get_detail_job(parseInt(id));
+    $(".card-body").each(function (a,b) {
+        $(b).attr("style","box-shadow: none;")
+    })
+    $(this).attr("style","box-shadow: 0 0 5px black;");
 });

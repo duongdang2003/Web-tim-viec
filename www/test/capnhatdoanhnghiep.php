@@ -12,20 +12,20 @@
   <script 
     src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js">    
   </script>             -->
-
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.1/dist/jquery.slim.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
   <link href="/Style/style2.css" rel="stylesheet">
-
   <!-- My CSS and JQuery -->
   <!-- <link href="/style.css" rel="stylesheet"> -->
   <!-- <script type="text/javascript" src="./index.js"></script>  -->
   <style>
-
   </style>
 </head>
 <body>
+  <nav class="navbar sticky-top navbar-dark bg-dark">
+    <a class="navbar-brand offset-sm-1" href="#" style="font-family:Ink Free, Regularl">FINDWORK</a>
+  </nav>
   <div class="container-fluid bg">
     <div class="row justify-content-center">
       <div class="col-xs-12 col-sm-10 row-container my-5">
@@ -54,7 +54,7 @@
             <div class="d-sm-flex flex-sm-row">
                 <div class="form-group col-sm-6">
                     <label for="number">Số điện thoại</label>
-                    <input type="number" class="form-control py-3" id="number" placeholder="Nhập tên số điện thoại ở đây" required>
+                    <input type="number" class="form-control py-3" id="number" placeholder="Nhập số điện thoại ở đây" required>
                   </div>
                 <div class="form-group col-sm-6">
                     <label for="email">Email</label>
@@ -76,9 +76,9 @@
             </div>
             <div class="form-group col-12">
                 <label for="comment">Giới thiệu doanh nghiệp</label>
-                <textarea class="form-control" rows="3" id="comment" placeholder="Nhập mô tả ở đây" required></textarea>
+                <textarea class="form-control" rows="3" id="comment" placeholder="Nhập mục tiêu nghề nghiệp ở đây" required></textarea>
             </div>
-            <div class="offset-sm-4">
+            <div class="offset-4">
                     <button type="submit" class="mx-auto">Đăng việc</button>
             </div>
         </div>
@@ -87,7 +87,6 @@
     </div>
   </div>
   <script>
-
 </script>
   <script>
     // Disable form submissions if there are invalid fields

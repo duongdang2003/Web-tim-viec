@@ -2,6 +2,9 @@
 .content-1{
 	height:100vh;
 }
+.btn-timviec:hover a{
+	color:black !important;
+}
 /* các css cũ */
 .mask{
    background-color: rgba(0, 0, 0, 0.85); 

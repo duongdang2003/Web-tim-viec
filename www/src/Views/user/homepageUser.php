@@ -1,7 +1,10 @@
+<?php
+	require("check.php");
+?>
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8" />
+	<meta charset="UTF-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<!-- Boostrap CDN -->
@@ -12,22 +15,24 @@
 	<!-- Jquery CDN -->
 	<script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
 	<!-- Custom.css -->
-	<link rel="stylesheet" href="../../assets/Styles/custom.css">
+	<link rel="stylesheet" href="../../../src/assets/Styles/custom.css">
 	<!-- navbar.css -->
-	<link rel="stylesheet" href="../../assets/Styles/navbar.css">
+	<link rel="stylesheet" href="../../../src/assets/Styles/navbar.css">
 	<!-- content1.css.css -->
-	<link rel="stylesheet" href="../../assets/Styles/content1.css">
+	<link rel="stylesheet" href="../../../src/assets/Styles/content1.css">
 	<!-- content3.css.css -->
-	<link rel="stylesheet" href="../../assets/Styles/content3.css">
+	<link rel="stylesheet" href="../../../src/assets/Styles/content3.css">
 	<!-- content2.css -->
-	<link rel="stylesheet" href="../../assets/Styles/content2.css">
+	<link rel="stylesheet" href="../../../src/assets/Styles/content2.css">
 	<!-- footer.css -->
-	<link rel="stylesheet" href="../../assets/Styles/footer.css">
+	<link rel="stylesheet" href="../../../src/assets/Styles/footer.css">
 	<!-- reponsive.css -->
-	<link rel="stylesheet" href="../../assets/Styles/reponsive.css">
+	<link rel="stylesheet" href="../../../src/assets/Styles/reponsive.css">
+	<!-- navbarUser -->
+	<link rel="stylesheet" href="../../../src/assets/Styles/pageinfouser.css">
 	<!-- font-awesome -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-	<title>FindWork</title>
+	<title>Find Work</title>
 </head>
 
 <body>
@@ -37,12 +42,18 @@
 
 	<div id="main">
 		<?php
-			require_once("../layouts/app/content1.php");
-			require_once("../layouts/app/content2.php");
-			require_once("../layouts/app/content3.php");
-			require_once("../layouts/app/footer.php");
+			require_once("./app/navbar.php");
+			require_once("../../../src/Views/layouts/app/content1.php");
+			require_once("../../../src/Views/layouts/app/content2.php");
+			require_once("../../../src/Views/layouts/app/content3.php");
+			require_once("../../../src/Views/layouts/app/footer.php");
 		?>
 	</div>
 </body>
-<script src="./test/Script/script.js"></script>
+<script src="../../../src/assets/Scripts/script.js"></script>
+<script src="../../../src/assets/Scripts/content2.js"></script>
+<script src="../../../src/assets/Scripts/content3.js"></script>
+<script src="../../../src/assets/Scripts/content1.js"></script>
+<script src="../../../src/assets/Scripts/navbar.js"></script>
+
 </html>

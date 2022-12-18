@@ -1,3 +1,8 @@
+<?php
+session_start();
+if(isset($_SESSION["user"]) && $_SESSION["user"]=="dadangnhap")
+	Header("Location: ./src/Controllers/C_SignIn.php");
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -44,4 +49,5 @@
 <script src="./src/assets/Scripts/script.js"></script>
 <script src="./src/assets/Scripts/content2.js"></script>
 <script src="./src/assets/Scripts/content3.js"></script>
+<script src="./src/assets/Scripts/content1.js"></script>
 </html>

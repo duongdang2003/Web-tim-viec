@@ -12,55 +12,40 @@
   <script 
     src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js">    
   </script>             -->
-
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.1/dist/jquery.slim.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
-  <link href="../test/Style/style2.css" rel="stylesheet">
-
+  <link href="./Style/style2.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+  rel="stylesheet">
   <!-- My CSS and JQuery -->
   <!-- <link href="/style.css" rel="stylesheet"> -->
   <!-- <script type="text/javascript" src="./index.js"></script>  -->
   <style>
-
   </style>
 </head>
 <body>
+  <nav class="navbar sticky-top navbar-dark bg-dark">
+    <a class="navbar-brand offset-sm-1" href="#" style="font-family:Ink Free, Regularl">FINDWORK</a>
+  </nav>
   <div class="container-fluid bg">
     <div class="row justify-content-center">
       <div class="col-xs-12 col-sm-10 row-container my-5">
         <form id="form" action="/" class="needs-validation my-4" novalidate>
             <h1 class="text-center">Đăng việc</h1>
             <div class="d-sm-flex  flex-sm-row mt-4">
-                <div class="form-group col-sm-4">
+                <div class="form-group col-sm-7">
                     <label for="namework">Tên công việc</label>
                     <input type="text" class="form-control py-3" id="namework" placeholder="Nhập tên công việc ở đây" required>
                 </div>
-                <div class="form-group col-sm-4">
-                    <label for="bangcap">Yêu cầu bằng cấp (tối thiểu)</label>
-                    <input type="text" class="form-control py-3" id="bangcap" placeholder="Đại học, cấp 3, chứng chỉ,..." required>
-                </div>
-                <div class="form-group col-sm-4">
+                <div class="form-group col-sm-5">
                     <label for="linhvuc">Lĩnh vực</label>
                     <select class="form-control" id="linhvuc">
                         <option>Công nghệ thông tin</option>
-                        <option>Viễn thông</option>
-                        <option>Marketing / Truyền thông / Quảng cáo</option>
-                        <option>Nhà hàng / Khách sạn</option>
-                        <option>Thời trang</option>
-                        <option>Internet / Online</option>
-                        <option>Bất động sản</option>
-                        <option>Dược phẩm / Y tế / Công nghệ sinh học</option>
-                        <option>Kế toán / Kiểm toán</option>
-                        <option>Kinh doanh</option>
+                        <option>Điện tử viễn thông</option>
                         <option>Giáo dục</option>
                         <option>Văn phòng</option>
-                        <option>Bảo hiểm</option>
-                        <option>Luật</option>
-                        <option>Giải trí</option>
-                        <option>Agency</option>
-                        <option>Tài chính / Ngân Hàng</option>
-                        <option>Khác</option>
+                        <option>Xây dựng</option>
                     </select>
                 </div>
             </div>
@@ -71,7 +56,7 @@
                 </div>
                 <div class="form-group col-sm-4">
                     <label for="luong">Lương</label>
-                    <input type="text" class="form-control py-3" id="luong" placeholder="Nhập lương($) ở đây" required>
+                    <input type="text" class="form-control py-3" id="luong" placeholder="Nhập tên lương ở đây" required>
                 </div>
                 <div class="form-group col-sm-3">
                     <label for="loaicv">Loại công việc</label>
@@ -81,25 +66,15 @@
                     </select>                    
                 </div>
             </div>
-            <div class="d-sm-flex flex-sm-row">
-              <div class="form-group col-9">
-                  <label for="diachi">Địa chỉ</label>
-                  <input type="text" class="form-control py-3" id="diachi" placeholder="Nhập địa chỉ ở đây" required>
-              </div>
-              <div class="form-group col-3">
-                  <label for="soluongtuyen">Số lượng tuyển dụng</label>
-                  <input type="number" class="form-control py-3" id="soluongtuyen" placeholder="1" required>
-              </div>
+            <div class="form-group col-12">
+                <label for="diachi">Địa chỉ</label>
+                <input type="text" class="form-control py-3" id="diachi" placeholder="Nhập tên địa chỉ ở đây" required>
             </div>
             <div class="d-sm-flex flex-sm-row">
-                <div class="form-group col-sm-3">
+                <div class="form-group col-sm-6">
                     <label for="number">Số điện thoại</label>
-                    <input type="number" class="form-control py-3" id="number" placeholder="Nhập số điện thoại ở đây" required>
-                </div>
-                <div class="form-group col-sm-3">
-                    <label for="duration">Thời hạn tuyển dụng</label>
-                    <input type="date" class="form-control py-3" id="duration" required>
-                </div>
+                    <input type="number" class="form-control py-3" id="number" placeholder="Nhập tên số điện thoại ở đây" required>
+                  </div>
                 <div class="form-group col-sm-6">
                     <label for="email">Email</label>
                     <input type="email" class="form-control py-3" id="email" placeholder="Nhập tên email ở đây" required>
@@ -107,26 +82,24 @@
             </div>
             <div class="form-group col-12">
                 <label for="comment">Mô tả công việc</label>
-                <textarea class="form-control" rows="3" id="comment" placeholder="Mỗi dòng mô tả là một mục" required></textarea>
+                <textarea class="form-control" rows="3" id="comment" placeholder="Nhập mô tả công việc ở đây" required></textarea>
             </div>
-            <div class="d-sm-flex flex-sm-row">
-              <div class="form-group col-6">
-                  <label for="quyenloi">Quyền lợi được hưởng</label>
-                  <textarea class="form-control" rows="3" id="quyenloi" placeholder="Mỗi dòng mô tả là một mục" required></textarea>
+            <div class="tag-input form-group col-7">
+              <div class="input">
+                  <label for="tag-ip">Thêm tag kĩ năng</label>
+                  <div class="d-flex flex-row">
+                      <input class="form-control mt-2" type="text" id="tag-ip" placeholder="Thêm ít nhất 2 kĩ năng yêu cầu">
+                      <span class="material-icons btn" value="" style="color:gray; font-size: 36px">
+                          add_circle_outline
+                          </span>
+                  </div>
+      
               </div>
-              <div class="col-6">
-                  <label for="yeucau">Yêu cầu công việc</label>
-                  <textarea class="form-control" rows="3" id="yeucau" placeholder="Mỗi dòng mô tả là một mục" required></textarea>
-              </div>
+              <div class="tag-list"></div>
             </div>
-
-            <div class="form-group">
-                <label for="tag">Thêm tag kĩ năng</label>
-            </div>
-            <div class="offset-sm-4">
+            <div class="offset-4">
                     <button type="submit" class="mx-auto">Đăng việc</button>
             </div>
-
         </div>
         </form>
       </div>
@@ -151,6 +124,36 @@
         });
       }, false);
     })();
-    </script>
+    //tag
+    let tags = [];
+    function addTag(e)
+    {
+        console.log(e);
+        //let tag = e.target.value.trim();
+        let tag = document.getElementById('tag-ip').value.trim()
+        if (tag.length < 1 || tags.includes(tag))
+        {
+            e.target.value = "";
+            return;
+        }
+        let index = tags.push(tag);
+        let tagItem = document.createElement("div");
+        tagItem.classList.add("item");
+        tagItem.innerHTML = `
+            <span class="delete-btn" onclick ="deleteTag(this,'${tag}')">&times;
+            </span>
+            <span>${tag}</span>
+        `;
+        document.querySelector(".tag-list").appendChild(tagItem);
+        e.target.value = "";
+    }
+    function deleteTag(ref, tag){
+        let parent = ref.parentNode.parentNode;
+        parent.removeChild(ref.parentNode);
+        let index = tags.indexOf(tag);
+        tags.splice(index);
+    }
+    document.querySelector(".material-icons").addEventListener("click",addTag);
+  </script>
 </body>
 </html>	

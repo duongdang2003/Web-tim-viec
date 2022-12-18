@@ -1,11 +1,13 @@
 <?php
     session_start();
 
-    $loginPage = 'login.php';
+    $loginPage = 'C_SignIn.php';
     if (!isset($_SESSION['user'])) {
         header("Location: $loginPage");
         exit();
     }
 
     session_destroy();
+    header("Location: $loginPage");
+
 ?>

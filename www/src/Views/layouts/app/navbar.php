@@ -1,7 +1,7 @@
 <div class="navbar-content fixed-top" id="navbar-content">
 	<nav class="navbar navbar-expand-lg navbar-dark px-4 format-nav">
 		<div class="container">
-			<a class="navbar-brand" href="">FINDWORK</a>
+			<a class="navbar-brand" href="../../../../index.php">FINDWORK</a>
 			<button class="navbar-toggler" id="btn-menu" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span>
 			</button>

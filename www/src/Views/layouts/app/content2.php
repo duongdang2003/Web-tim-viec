@@ -23,16 +23,15 @@
               <ul class="filter-dropdownlist filter-dropdownlist-linhvuc" id="filter-menu">
                 <input class="form-control myInputSearch" id="myInput2" type="text" autocomplete="off" placeholder="Search..">
                 <li class="filter-dropdownlistItem">
-                  <div class="filter-dropdownlistitemLink">Công nghệ</div>
+                  <div class="filter-dropdownlistitemLink">Tất cả</div>
                 </li>
-                <li class="filter-dropdownlistItem">
+                <!-- <li class="filter-dropdownlistItem">
                   <div class="filter-dropdownlistitemLink">Kinh tế</div>
-                </li>
+                </li> -->
               </ul>
 
             </div>
           </div>
-
           <div class="filter-dropdown">
             <div class="filter-dropdown-container">
               <button class="btn-filter-dropdown" id="btn-filterdropdown1" aria-haspopup="true" aria-expanded="false" aria-controls="filter-menu">
@@ -50,11 +49,11 @@
               <ul class="filter-dropdownlist filter-dropdownlist-mucluong" id="filter-menu1">
                 <input class="form-control myInputSearch" id="myInput3" autocomplete="off" type="text" placeholder="Search..">
                 <li class="filter-dropdownlistItem">
-                  <div class="filter-dropdownlistitemLink">100.000.000đ/tháng</div>
+                  <div class="filter-dropdownlistitemLink">Tất cả</div>
                 </li>
-                <li class="filter-dropdownlistItem">
+                <!-- <li class="filter-dropdownlistItem">
                   <div class="filter-dropdownlistitemLink">200.000.000đ/tháng</div>
-                </li>
+                </li> -->
               </ul>
             </div>
           </div>
@@ -76,11 +75,11 @@
               <ul class="filter-dropdownlist filter-dropdownlist-hinhthuc" id="filter-menu2">
                 <input class="form-control myInputSearch" id="myInput4" autocomplete="off" type="text" placeholder="Search..">
                 <li class="filter-dropdownlistItem">
-                  <div class="filter-dropdownlistitemLink">Toàn thời gian</div>
+                  <div class="filter-dropdownlistitemLink">Tất cả</div>
                 </li>
-                <li class="filter-dropdownlistItem">
+                <!-- <li class="filter-dropdownlistItem">
                   <div class="filter-dropdownlistitemLink">Bán thời gian</div>
-                </li>
+                </li> -->
               </ul>
             </div>
           </div>
@@ -101,21 +100,27 @@
               <ul class="filter-dropdownlist filter-dropdownlist-diadiem" id="filter-menu3">
                 <input class="form-control myInputSearch" id="myInput5" autocomplete="off" type="text" placeholder="Search..">
                 <li class="filter-dropdownlistItem">
-                  <div class="filter-dropdownlistitemLink">Thành Phố Hồ Chí Minh</div>
+                  <div class="filter-dropdownlistitemLink">Tất cả</div>
                 </li>
-                <li class="filter-dropdownlistItem">
+                <!-- <li class="filter-dropdownlistItem">
                   <div class="filter-dropdownlistitemLink">Hà Nội</div>
-                </li>
+                </li> -->
               </ul>
             </div>
           </div>
           <div class="filter-dropdown-icon">
-            <button class="btn-filter-dropdown" id="btn-filterdropdown4" aria-haspopup="true" aria-expanded="false" aria-controls="filter-menu4">
+            <button class="btn-filter-dropdown" id="btn-filterdropdown4" aria-haspopup="true" aria-expanded="false" aria-controls="filter-menu4" onclick="btnFilter(getFilterFromUser)">
               <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="currentColor" class="bi bi-filter" viewBox="0 0 16 16">
                 <path d="M6 10.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 0 1h-3a.5.5 0 0 1-.5-.5zm-2-3a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5zm-2-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5z" />
               </svg>
             </button>
           </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12">
+        <div class="ds-row-content3" id="thongbaoFilter">
         </div>
       </div>
     </div>
